@@ -1,0 +1,957 @@
+<!-- Devs: A.I test, Natalie M., Andrew J.W. -->
+
+<!-- 🟦 = ENTIRE SECTION DIVIDER -->
+<!-- 🟪 = CHUNKS WITHIN SECTION DIVIDER IF TOO BIG -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Neptune - Explore the Unexplored</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="bg-gradient-to-b from-blue-500 via-indigo-500 to-indigo-900 break-all break-words hyphens-auto sm:flex sm:flex-col">
+
+<!-- Accessibility -->
+
+<div class="text-white text-2xl text-center">
+<a href="#sktm-link" class="skip-to-main-link bg-indigo-900 p-2 m-3 rounded-md">
+Skip-to-Main
+</a>
+</div>
+
+
+<!-- Header -->
+<header aria-hidden="false" class="bg-gradient-to-tr from-gray-700 to-gray-300 p-3 border-white border-l-2 border-t-2">
+<!-- Main row -->
+<div class="mx-auto w-full flex items-center gap-2 justify-center xl:justify-between">
+
+<!-- Left: Logo cluster (stays visible) -->
+<div class="flex items-center gap-2">
+<div>
+<i aria-hidden="true" class="md:inline flex font-bold text-black text-4xl">♆</i>
+</div>
+
+
+<div class="hidden md:inline-flex gap-1">
+<p aria-hidden="true" class="text-4xl font-bold">Discover</p>
+<p aria-hidden="true" class="text-blue-800 text-4xl font-bold">Neptune</p>
+</div>
+
+<!-- Compact logo for small screens -->
+<div class="md:hidden flex items-center">
+<p class="text-4xl font-bold text-black">D</p>
+<p class="text-4xl font-bold text-blue-800">N</p>
+<span class="sr-only">Discover Neptune - Logo</span>
+</div>
+</div>
+
+<!-- Mobile Menu Button (shows below 2xl, centered with logo) -->
+<div class="xl:hidden">
+<button id="mobile-open" aria-label="Open Mobile Navigation"
+class="inline-flex items-center p-3 rounded-md text-white bg-blue-900 hover:text-white hover:bg-gray-900 transition duration-100">
+<svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+</button>
+</div>
+
+<!-- Desktop Navigation (appears at 2xl, pushes layout to edges) -->
+<nav class="hidden xl:flex items-center gap-6 p-3">
+<a href="#launch-dates" class="bg-blue-900 hover:bg-gray-800 hover:underline text-white px-3 py-2 rounded-md text-md">Launch Dates</a>
+<a href="#destination" class="bg-blue-900 hover:bg-gray-800 hover:underline text-white px-3 py-2 rounded-md text-md">Destinations</a>
+<a href="#whyDN?" class="bg-blue-900 hover:bg-gray-800 hover:underline text-white px-3 py-2 rounded-md text-md">Why Us?</a>
+<a href="#testimonials" class="bg-blue-900 hover:bg-gray-800 hover:underline text-white px-3 py-2 rounded-md text-md">Testimonials</a>
+<a href="#contact" class="bg-blue-900 hover:bg-gray-800 hover:underline text-white px-3 py-2 rounded-md text-md">Contact</a>
+<button class="bg-indigo-700 hover:bg-blue-900 text-white px-6 py-4 rounded-md text-md transition duration-300">Book Now</button>
+</nav>
+
+</div>
+</header>
+
+
+
+
+<!-- Hero Section -->
+<main id="sktm-link" class="hero flex items-center justify-center text-center">
+
+<div class="m-5">
+<div class="shadow-lg shadow-gray-600 flex flex-col m-10 px-4 py-16 sm:px-6 lg:px-8 bg-black/40 backdrop-blur-sm border-l-2 border-t-2 rounded-lg">
+<h1 id="discover" class="text-4xl md:text-6xl font-bold text-white mb-6">
+Discover What's Beneath
+</h1>
+<p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto">
+Journey beyond the ordinary with Neptune's most exclusive travel experiences
+</p>
+
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a href="#destination" class="bg-black/60 hover:bg-blue-900 hover:underline text-lg text-white px-6 py-3 rounded-md font-medium transition duration-300">
+Explore Destinations
+</a>
+<button id="vid-modal-open" class="bg-indigo-700 hover:bg-blue-900 text-white px-6 py-3 rounded-md font-medium transition duration-300">
+Watch Video <i class="fas fa-play ml-2"></i>
+</button>
+</div>
+</div>
+</main>
+
+
+
+
+<!-- qiock planner -->
+<div class="items-center px-4 sm:px-6 lg:px-8 -mt-10 relative z-1">
+<div class="bg-gradient-to-tr from-gray-500 to-gray-400 shadow-xl p-6 border-l-2 border-t-2 border-white">
+
+
+<h2 class="text-4xl font-bold text-black border-b-2 max-w-xs my-3 text-center">
+Quick Planner
+</h2>
+
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+
+<div>
+<label for="destination" class="block text-xl font-medium text-black mb-1">Destination</label>
+<div class="relative">
+<select id="destination" class="focus:bg-blue-900 focus:text-white hover:bg-blue-900 hover:text-white w-full pl-3 pr-10 py-2 border border-gray-800 rounded-md">
+<option class="bg-blue-900 text-white">Anywhere</option>
+<option class="bg-blue-900 text-white">Thalassa's Floating Gardens</option>
+<option class="bg-blue-900 text-white">Triton's Icebound Expidition Zone</option>
+<option class="bg-blue-900 text-white">Galatea's Celestial Observation Retreat</option>
+<option class="bg-blue-900 text-white">(Special) Journy to Neptune's Core</option>
+</select>
+</div>
+</div>
+
+<div>
+<label for="check-in" class="block text-xl font-medium text-black mb-1">Check In</label>
+<input type="date" id="check-in" class="w-full px-3 py-2 border border-gray-800 rounded-md">
+</div>
+
+<div>
+<label for="check-out" class="block text-xl font-medium text-black mb-1">Check Out</label>
+<input type="date" id="check-out" class="w-full px-3 py-2 border border-gray-800 rounded-md">
+</div>
+
+<div class="flex items-end">
+<button class="w-full bg-indigo-700 hover:bg-blue-900 text-white text-xl px-4 py-2 rounded-md font-medium transition duration-300">Search</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<!-- Trip Launch Dates -->
+<section class="bg-black/40 py-16 m-10 border-white border-l-2 border-t-2">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 id="launch-dates" tabindex="-1" class="break-all text-5xl font-bold text-white mb-4">
+<p>Trip Launch Dates</p>
+</h2>
+<p class="text-gray-100 text-2xl max-w-3xl mx-auto">See when your desired trip-package is set to launch next!</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-8">
+
+<!-- Date 1 -->
+<div class="bg-white/10 rounded-md overflow-hidden shadow-lg transition duration-300 border-l-4 border-t-4 border-white">
+
+<div class="p-6">
+<div class="flex items-center mb-2">
+<h3 class="flex text-2xl font-bold text-white">
+<p>Proteus Package</p>
+</h3>
+</div>
+
+<hr>
+
+<p class="text-white mt-2 font-bold">Departure From:</p>
+
+<div class="flex">
+<div class="flex items-center text-white text-sm mb-4 mt-1">
+<i class="fas fa-map-marker-alt text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Discover Travel Terminal,</p>
+<p>LA, CA, USA, Earth</p>
+</div>
+</div>
+
+<div class="flex items-center text-white mb-4 mt-2">
+<i class="fas fa-clock text-2xl ml-4 mr-2"></i>
+<div>
+<p>Trip:</p>
+<p>7 Days</p>
+</div>
+</div>
+</div>
+
+<hr>
+
+<p class="text-white mt-2 font-bold">Destination:</p>
+
+<div class="flex">
+<div class="flex items-center text-white text-sm mb-4 mt-1">
+<i class="fas fa-map-marker-alt text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Neptune Orbital Station</p>
+</div>
+</div>
+
+<div class="flex items-center text-white mb-4 mt-2">
+<i class="fas fa-clock text-2xl ml-4 mr-2"></i>
+<div class="flex flex-col">
+<p>Stay:</p>
+<p> 7 Days</p>
+</div>
+</div>
+</div>
+
+<hr>
+
+
+<p class="text-white my-1 font-bold">Launch Date:</p>
+
+<div class="flex justify-between items-center">
+<div class="flex items-center bg-black/80 p-1 rounded-md">
+<p class="text-white ml-1">November 15,  2131</p>
+</div>
+<button class="border-2 border-white bg-blue-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Book Now</button>
+</div>
+</div>
+</div>
+
+<!-- Date 2 -->
+<div class="bg-white/10 rounded-md rounded-md overflow-hidden shadow-lg transition duration-300 hover:shadow-xl border-l-4 border-t-4 border-white">
+
+<div class="p-6">
+<div class="flex items-start mb-2">
+<h3 class="text-xl font-bold text-white">
+<p>Larissa Package Launch Date</p>
+</h3>
+</div>
+<p class="text-white mb-4">10 days exploring temples, rice terraces and beaches</p>
+<div class="flex items-center text-white text-sm mb-4">
+<i class="fas fa-map-marker-alt mr-2"></i>
+<span>Bali, Indonesia</span>
+<i class="fas fa-clock ml-4 mr-2"></i>
+<span>10 Days</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center bg-black/80 p-1 rounded-md">
+<i class="fas fa-star text-yellow-400"></i>
+<span class="text-white p-1">4.8 (96 reviews)</span>
+</div>
+<button class="border-2 border-white bg-blue-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Book Now</button>
+</div>
+</div>
+</div>
+
+<!-- Date 3 -->
+<div class="bg-white/10 rounded-md rounded-md overflow-hidden shadow-lg transition duration-300 hover:shadow-xl border-l-4 border-t-4 border-white">
+
+<div class="p-6">
+<div class="flex items-start mb-2">
+<h3 class="text-xl font-bold text-white">
+<p>Triton Package Launch Date</p>
+</h3>
+</div>
+<p class="text-white mb-4">14 days exploring Santorini, Mykonos, and Crete</p>
+<div class="flex items-center text-white text-sm mb-4">
+<i class="fas fa-map-marker-alt mr-2"></i>
+<span>Greece</span>
+<i class="fas fa-clock ml-4 mr-2"></i>
+<span>14 Days</span>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex items-center bg-black/80 p-1 rounded-md">
+<i class="fas fa-star text-yellow-400"></i>
+<span class="ml-1 text-white">4.7 (84 reviews)</span>
+</div>
+<button class="hover:shadow-xl border-2 border-white bg-blue-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="text-center mt-12">
+<button class="bg-black/30 border-2 border-white hover:bg-gray-800 text-white px-6 py-3 rounded-md font-medium transition duration-300">View All Packages</button>
+</div>
+</div>
+</section>
+
+
+
+
+
+<!-- FEATURED DESTINATIONS -->
+<section class="flex bg-black/30 py-16 m-10 border-white border-l-2 border-t-2">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 id="destination" class="break-all text-5xl font-bold text-white mb-4">
+<p>Featured Destinations</p>
+</h2>
+<p class="text-white max-w-2xl mx-auto">Explore our handpicked selection of the world's most breathtaking locations</p>
+</div>
+
+
+
+<!-- Carousel -->
+<div class="text-center items-center max-w-full mx-auto">
+<div class="carousel" aria-labelledby="carousel-heading">
+<h2 id="carousel-heading" class="sr-only">Featured Destinations Carousel</h2>
+
+<!-- CAROUSEL TRACK -->
+<div class="flex items-center carousel-track" role="group">
+
+
+
+<!-- FD PREVIOUS BUTTON -->
+<div class="carousel-controls m-5 items-center">
+<button aria-label="previous" class="prev-btn text-xl font-bold bg-white/60 p-2 rounded-xl">
+<i aria-hidden="true" class="fas fa-arrow-left"></i>
+</button>
+</div>
+
+<!-- SLIDES -->
+
+<!-- SLIDE 1 -->
+<div class="carousel-slide" data-index="0">
+
+<div class="aspect-[12/12] w-full max-w-3xl relative border-l-2 border-t-2 border-white rounded-lg shadow-lg group">
+<img src="../images/Thalassa's Floating Gardens Domes.png" alt="" class="w-full h-full object-cover">
+<div class="absolute inset-0 items-center bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+<h3 class="hidden md:block text-white text-3xl font-bold mb-2">Thalassa's Floating Gardens Domes</h3>
+<p class="hidden md:inline-flex  text-xl text-gray-200 mb-4">Experience the serene biosphere domes hovering in Neptune’s calmer cloud layers.</p>
+<div class="flex justify-between space-x-1 md:space-x-20">
+<span class="hidden md:inline-flex text-white font-medium bg-indigo-700 rounded-md px-2 py-1">$899 per person</span>
+<button id="fd-1-modal-open-desktop" class="hidden md:inline-flex items-center  bg-blue-900 text-white hover:text-white hover:bg-gray-700 transition duration-100 px-4 py-2 rounded-md text-sm font-medium transition duration-300">View Details 
+<i aria-hidden="true" class="ml-1 fas fa-circle-info"></i>
+</button>
+
+<button aria-label="Thalassa's Floating Gardens Domes. view details" id="fd-1-modal-open-mobile" class="inline-flex md:hidden bg-blue-900 text-white hover:text-white hover:bg-gray-700 transition duration-100 px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+<i aria-hidden="true" class="fas fa-circle-info"></i>
+</button>
+</div>
+</div>
+</div>
+
+<div>
+<p aria-hidden="true" class="inline-block mx-auto mt-2 p-2 bg-black/40 rounded-xl text-xl text-white">1 of 3</p>
+</div>
+
+</div>
+
+<!-- SLIDE 2 -->
+<div class="carousel-slide hidden" data-index="0">
+
+<div class="aspect-[12/12] w-full max-w-3xl relative border-l-2 border-t-2 border-white rounded-lg shadow-lg group">
+<img src="../images/Triton's Icebound Expidition Zone.png" alt="" class="w-full h-full object-cover">
+<div class="absolute inset-0 items-center bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+<h3 class="hidden md:block text-white text-3xl font-bold mb-2">Triton's Icebound Expidition Zone</h3>
+<p class="hidden md:inline-flex  text-xl text-gray-200 mb-4">Brace yourself for high-altitude adventure in Neptune’s polar jetstreams.</p>
+<div class="flex justify-between space-x-1 md:space-x-20">
+<span class="hidden md:inline-flex text-white font-medium bg-indigo-700 rounded-md px-2 py-1">$1,899 per person</span>
+<button id="fd-2-modal-open-desktop" class="hidden md:inline-flex items-center  bg-blue-900 text-white hover:text-white hover:bg-gray-700 transition duration-100 px-4 py-2 rounded-md text-sm font-medium transition duration-300">View Details 
+<i aria-hidden="true" class="ml-1 fas fa-circle-info"></i>
+</button>
+
+<button aria-label="Triton's Icebound Expidition Zone. view details" id="fd-2-modal-open-mobile" class="inline-flex md:hidden bg-blue-900 text-white hover:text-white hover:bg-gray-700 transition duration-100 px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+<i aria-hidden="true" class="fas fa-circle-info"></i>
+</button>
+</div>
+</div>
+</div>
+
+<div>
+<p aria-hidden="true" class="inline-block mx-auto mt-2 p-2 bg-black/40 rounded-xl text-xl text-white">2 of 3</p>
+</div>
+
+</div>
+
+
+<!-- SLIDE 3 -->
+<div class="carousel-slide hidden" data-index="0">
+
+<div class="aspect-[12/12] w-full max-w-3xl relative border-l-2 border-t-2 border-white rounded-lg shadow-lg group">
+<img src="../images/Galatea's Celestial Observation Retreat.png" alt="" class="w-full h-full object-cover">
+<div class="absolute inset-0 items-center bg-gradient-to-t from-black/50 to-transparent flex flex-col justify-end p-6">
+<h3 class="hidden md:block text-white text-3xl font-bold mb-2">Galatea's Celestial Observation Retreat</h3>
+<p class="hidden md:inline-flex  text-xl text-gray-200 mb-4">Cozy up in a sky-suspended observatory retreat, drifting just beneath Neptune’s hazy rings</p>
+<div class="flex justify-between space-x-1 md:space-x-20">
+<span class="hidden md:inline-flex text-white font-medium bg-indigo-700 rounded-md px-2 py-1">$899 per person</span>
+<button id="fd-3-modal-open-desktop" class="hidden md:inline-flex items-center  bg-blue-900 text-white hover:text-white hover:bg-gray-700 transition duration-100 px-4 py-2 rounded-md text-sm font-medium transition duration-300">View Details 
+<i aria-hidden="true" class="ml-1 fas fa-circle-info"></i>
+</button>
+
+<button aria-label="Galatea's Celestial Observation Retreat. view details" id="fd-3-modal-open-mobile" class="inline-flex md:hidden bg-blue-900 text-white hover:text-white hover:bg-gray-700 transition duration-100 px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+<i aria-hidden="true" class="fas fa-circle-info"></i>
+</button>
+</div>
+</div>
+</div>
+
+<div>
+<p aria-hidden="true" class="inline-block mx-auto mt-2 p-2 bg-black/40 rounded-xl text-xl text-white">3 of 3</p>
+</div>
+
+</div>
+
+<!-- SLIDE BUTTONS 2-->
+<div class="carousel-controls m-5">
+<button aria-label="next" type="button" class="next-btn text-xl font-bold bg-white/60 p-2 rounded-xl">
+<i aria-hidden="true" class="fas fa-arrow-right"></i>
+</button>
+</div>
+
+<div id="carousel-status" aria-live="polite" class="sr-only"></div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+<!-- Why Choose Us -->
+<section class="bg-black/40 py-16 m-10 border-white border-l-2 border-t-2">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 id="whyDN?" class="break-all text-5xl font-bold text-white mb-4">Why Choose Discover Neptune</h2>
+<p class="text-gray-100 max-w-2xl mx-auto">We go above and beyond to make your travel experience unforgettable</p>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-3 gap-8">
+
+<div class="bg-black bg-opacity-40 border-l-2 border-t-2 text-center p-6 rounded-md shadow-gray-500 shadow-lg">
+<div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-globe text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-white mb-2">Global Network</h3>
+<p class="text-gray-100">Access to exclusive destinations and experiences through our worldwide partnerships</p>
+</div>
+
+<div class="bg-black bg-opacity-40 border-l-2 border-t-2 text-center p-6 rounded-md shadow-gray-500 shadow-lg">
+<div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-concierge-bell text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-white mb-2">Personalized Service</h3>
+<p class="text-gray-100">Dedicated travel concierge to customize every detail of your journey</p>
+</div>
+
+<div class="bg-black bg-opacity-40 border-l-2 border-t-2 text-center p-6 rounded-md shadow-gray-500 shadow-lg">
+<div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+<i class="fas fa-shield-alt text-3xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-white mb-2">Peace of Mind</h3>
+<p class="text-gray-100">24/7 support and comprehensive travel protection for worry-free adventures</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Testimonials -->
+<section class="bg-black/40 py-16 m-10 border-white border-l-2 border-t-2">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="break-all text-5xl font-bold text-white mb-4">What Our Travelers Say</h2>
+<p class="text-gray-100 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied customers</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white/10 shadow-gray-500 shadow-lg border-l-2 border-t-2 border-white p-8 rounded-md">
+<div class="flex items-center mb-4">
+<div class="flex-shrink-0">
+<img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-semibold text-white">Sarah Johnson</h4>
+<div class="flex items-center">
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+</div>
+</div>
+</div>
+<p class="text-white mb-4">"The Maldives trip organized by Discover Neptune was beyond amazing. Every detail was perfect, from the private transfers to the stunning resort. Will definitely book with them again!"</p>
+<div class="text-white text-sm">Maldives Luxury Escape - June 2023</div>
+</div>
+
+<!-- Testimonial 2 -->
+<div class="bg-white/10 shadow-gray-500 shadow-lg border-l-2 border-t-2 border-white p-8 rounded-md">
+<div class="flex items-center mb-4">
+<div class="flex-shrink-0">
+<img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-semibold text-white">Michael Chen</h4>
+<div class="flex items-center">
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+</div>
+</div>
+</div>
+<p class="text-white mb-4 p-1 rounded-md">Our Bali adventure was seamless thanks to Discover Neptune. They handled all the logistics and even arranged special experiences we wouldn't have found on our own. Highly recommend!"</p>
+<div class="text-sm text-white p-1  rounded-md">Bali Adventure - April 2023</div>
+</div>
+
+<!-- Testimonial 3 -->
+<div class="bg-white/10 shadow-gray-500 shadow-lg border-l-2 border-t-2 border-white p-8 rounded-md">
+<div class="flex items-center mb-4">
+<div class="flex-shrink-0">
+<img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez">
+</div>
+<div class="ml-4">
+<h4 class="text-lg font-semibold text-white">Emily Rodriguez</h4>
+<div class="flex items-center">
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+<i class="fas fa-star text-yellow-400"></i>
+</div>
+</div>
+</div>
+<p class="text-gray-100 mb-4">"The Greek Islands tour was the perfect honeymoon. Discover Neptune thought of everything - romantic dinners, private tours, and the most beautiful hotels. Worth every penny!"</p>
+<div class="text-sm text-gray-100">Greek Island Hopping - May 2023</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Newsletter -->
+<section class="bg-black/40 py-16 mx-10 text-white border-l-2 border-t-2 border-white">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold mb-4">Get Travel Inspiration</h2>
+<p class="text-gray-100 mb-8 mx-auto">Subscribe to our newsletter for exclusive deals, travel tips, and destination inspiration</p>
+
+<div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+<input type="email" placeholder="Your email address" class="newsletter-input flex-grow px-4 py-3 rounded-md text-gray-900">
+<button class="bg-blue-900 hover:bg-gray-800 text-white border-2 border-white px-6 py-3 rounded-md font-medium transition duration-300">Subscribe</button>
+</div>
+
+<p class="text-sm text-ocean-light mt-4">We respect your privacy. Unsubscribe at any time.</p>
+</div>
+</section>
+
+
+
+<!-- Contact & Footer -->
+<footer class="bg-gray-900 text-white mx-10 border-l-2 border-t-2 border-white">
+<div class="border-b border-gray-600 gap-10 grid grid-cols-1 lg:grid-cols-5 md:grid-cols-1 sm:grid-cols-1 p-6">
+
+<!-- Brand Info -->
+<div class="mb-6 sm:mb-0">
+<div class="mb-4 flex items-center">
+<i class="fas fa-anchor text-neptune text-2xl mr-2"></i>
+<span class="text-xl font-bold">Discover Neptune</span>
+</div>
+<p class="text-gray-400 mb-4">
+Making dream vacations a reality since 2010.<br aria-hidden="true">
+We specialize in luxury and adventure travel experiences.
+</p>
+
+<div class="border-t border-gray-600 flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+<a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</div>
+
+<!-- Quick Links -->
+<div class="mb-6 sm:mb-0">
+<h2 class="text-lg font-semibold mb-2">Quick Links</h2>
+<hr class="mb-2" aria-hidden="true">
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Destinations</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Packages</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Special Offers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+</ul>
+</div>
+
+<!-- Credits -->
+<div class="mb-6 sm:mb-0">
+<h2 class="text-lg font-semibold mb-2">Credits</h2>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Destinations</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Packages</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Special Offers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+</ul>
+</div>
+
+<!-- Support -->
+<div class="mb-6 sm:mb-0">
+<h2 class="text-lg font-semibold mb-2">Support</h2>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Travel Insurance</a></li>
+</ul>
+</div>
+
+<!-- Contact -->
+<div>
+<h2 class="text-lg font-semibold mb-2">Contact Us</h2>
+<address class="not-italic text-gray-400">
+<p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-neptune"></i> 123 Ocean View Drive, Suite 100<br>Miami, FL 33139</p>
+<p class="mb-2"><i class="fas fa-phone-alt mr-2 text-neptune"></i> +1 (800) 555-1234</p>
+<p><i class="fas fa-envelope mr-2 text-neptune"></i> hello@discoverneptune.com</p>
+</address>
+</div>
+</div>
+
+<!-- Legal Bar -->
+<div class="m-4 p-2 flex flex-col items-center">
+<p class="text-gray-400 text-md">© 2023 Discover Neptune. All rights reserved.</p>
+</div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-1 right-1 hover:bg-gray-800/60 text-white p-2 rounded-full shadow-lg opacity-10 invisible transition-all duration-300">
+<i aria-hidden="true" class="fas fa-arrow-up"></i>
+<p>back to top</p>
+</button>
+
+
+
+<!-- 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 -->
+
+<!--MOBILE MENU MODAL-->
+
+<!-- MODAL CONTAINER -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-heading" class="hidden flex flex-col fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-10 backdrop-blur-sm">
+
+<!-- CLOSE BUTTON -->
+<div class="m-2">
+<div class="text-right">
+<button id="mobile-close" class="p-2 rounded-md bg-blue-900 text-white hover:text-white hover:bg-gray-900 transition duration-300">
+<i class="fas fa-times"> Close</i>
+</button>
+</div>
+
+<!-- MODAL CONTENT -->
+<div role="document" class="border-2 border-white bg-blue-900 rounded-md shadow-lg m-5 flex flex-col">
+
+<!-- MODAL HEADING -->
+<div class="m-2">
+<div class="bg-black bg-opacity-40 rounded-md">
+<h2 id="mobile-heading" tabindex="-1" class="flex justify-center space-x-1 text-center text-white font-bold p-1">
+<p class="glow-text">DISCOVER</p>
+<p class="text-indigo-400">NEPTUNE</p>
+</h2>
+</div>
+</div>
+
+<!-- MODAL TOGGLE GRAY SCALE BUTTON-->
+<div class="items-center">
+<div class="flex flex-col items-center">
+<button id="toggle-gray-modal" class="m-3 px-3 py-2 rounded-md text-base font-medium bg-black bg-opacity-40 text-white hover:bg-gray-900 transition duration-300"">
+<div class="relative flex justify-center">
+<span id="toggle-motion-modal-label" class="relative text-center z-10 color-white orbitron">Gray Scale: Off</span>
+</div>
+</button>
+</div>
+</div>
+
+<!-- MODAL NAV -->
+<nav class="flex flex-col">
+<ul>
+<nav>
+<ul class="flex flex-col text-center">
+
+<li class="m-3">
+<a href="#discover" class="px-3 py-2 rounded-md text-base font-medium text-white hover:text-black hover:bg-gray-200 underline transition duration-300">Discover</a>
+</li>
+
+<li class="m-2">
+<a href="#destinations" class="px-3 py-2 rounded-md text-base font-medium text-white hover:text-black hover:bg-gray-200 underline transition duration-300">Destinations</a>
+</li>
+
+<li class="m-2">
+<a href="#packages" class="px-3 py-2 rounded-md text-base font-medium text-white hover:text-black hover:bg-gray-200 underline transition duration-300">Packages</a>
+</li>
+
+<li class="m-2">
+<a href="#testimonials" class="px-3 py-2 rounded-md text-base font-medium text-white hover:text-black hover:bg-gray-200 underline transition duration-300">Testimonials</a>
+</li>
+
+<li class="m-3">
+<a href="#contact" class="px-3 py-2 rounded-md text-base font-medium text-white hover:text-black hover:bg-gray-200 underline transition duration-300">Contact</a>
+</li>
+
+<li class="m-2">
+<button class="px-3 py-2 rounded-md text-base font-medium bg-black bg-opacity-40 text-white hover:bg-gray-900 transition duration-300">Book Now</button>
+</li>
+</ul>
+</nav>
+
+<!-- MODAL LEGAL -->
+<div class="flex flex-col border-t border-gray-200 m-2 p-4 items-center">
+<p class="text-gray-200">© 2042 Neptune Voyages. All rights reserved.</p>
+<p class="text-gray-200 mt-4 md:mt-0">A subsidiary of Galactic Travel Holdings LLC.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<!-- 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 -->
+
+
+
+<!-- VIDEO MODAL CONTAINER -->
+<div id="vid-modal-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="vid-modal-heading" class="hidden flex flex-col fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-10 backdrop-blur-sm">
+
+<!-- VIDEO CLOSE BUTTON -->
+<div class="m-2">
+<div class="text-right">
+<button id="vid-modal-close" class="p-2 rounded-md bg-blue-900 text-white hover:text-white hover:bg-gray-900 transition duration-300">
+<i class="fas fa-times"> Close</i>
+</button>
+</div>
+
+<!-- VIDEO MODAL -->
+<div role="document" class="border-2 border-white bg-blue-900 rounded-md shadow-lg m-5 flex flex-col">
+
+<!-- VIDEO MODAL HEADING -->
+<div class="m-2">
+<div class="bg-black bg-opacity-40 rounded-md text-center">
+<h2 id="vid-modal-heading" tabindex="-1" class="text-white font-bold p-1">
+<p class="glow-text">DISCOVER</p>
+<p class="text-indigo-400">NEPTUNE</p>
+</h2>
+</div>
+</div>
+
+<!-- VIDEO MODAL CONTENT -->
+<div class="border-2 border-white m-10">
+<div>
+
+</div>
+</div>
+
+
+<!-- VIDEO MODAL LEGAL -->
+<div class="flex flex-col border-t border-gray-200 m-2 p-4 items-center">
+<p class="text-gray-200">© 2042 Neptune Voyages. All rights reserved.</p>
+<p class="text-gray-200 mt-4 md:mt-0">A subsidiary of Galactic Travel Holdings LLC.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<!-- 🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦 -->
+
+
+
+<!-- Featured Destinations Modal -->
+
+<!-- Featured Destinations 1 CONTAINER -->
+<div id="fd-1-modal-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="vid-modal-heading" class="hidden flex flex-col fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-10 backdrop-blur-sm">
+
+<!-- Featured Destinations 1 BUTTON -->
+<div class="m-2">
+<div class="text-right">
+<button id="fd-1-modal-close" class="p-2 rounded-md bg-blue-900 text-white hover:text-white hover:bg-gray-900 transition duration-300">
+<i class="fas fa-times"> Close</i>
+</button>
+</div>
+
+<!-- Featured Destinations 1 MODAL -->
+<div role="document" class="border-2 border-white bg-gradient-to-tr from-indigo-950 to-blue-800 rounded-md shadow-lg m-5 flex flex-col">
+
+<!-- Featured Destinations 1 MODAL HEADING -->
+<div class="m-2">
+<div class="bg-black bg-opacity-40 rounded-md text-center">
+<h2 id="fd-1-modal-heading" tabindex="-1" class="text-white font-bold p-1">
+<p class="glow-text">DISCOVER</p>
+<p class="text-indigo-400">NEPTUNE</p>
+</h2>
+</div>
+</div>
+
+<!-- Featured Destinations 1 MODAL CONTENT -->
+<div class="border-l-4 border-t-4 border-white m-10">
+<div class="flex">
+
+<div class="flex">
+
+<div class="ml-2 mt-2">
+<div class="border-2 border-white">
+<img src="../images/PIA00057~orig.jpg">
+</div>
+</div>
+
+<div class="">
+<div class="max-w-2xl border-2 border-white m-2 p-5 text-2xl text-white">
+
+<h2 class="text-4xl font-bold">
+Description:
+</h2>
+<p>
+Wander through serene biosphere domes gently hovering within Neptune’s calmer cloud layers,
+where lush gardens bloom under filtered starlight, adrift in the silence above the storms.
+</p>
+
+<div class="flex items-center w-full" role="presentation" aria-hidden="true">
+<div class="flex-1 border-2 border-blue-300"></div>
+<span class="mx-1 shrink-0 text-3xl text-blue-200" aria-hidden="true">♆</span>
+<div class="flex-1 border-2 border-blue-300"></div>
+</div>
+
+<h3 class="text-2xl font-bold mt-4">
+Included in the travel package:
+</h3>
+<ul>
+
+<li class="block">
+All-Access Pass to the entire floating station
+</li>
+
+<li>
+Room and board
+</li>
+
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- Featured Destinations 1 MODAL LEGAL -->
+<div class="flex flex-col border-t border-gray-200 m-2 p-4 items-center">
+<p class="text-gray-200">© 2042 Neptune Voyages. All rights reserved.</p>
+<p class="text-gray-200 mt-4 md:mt-0">A subsidiary of Galactic Travel Holdings LLC.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- FEATURED DESTINATIONS 2 -->
+<!-- Featured Destinations 2 CONTAINER -->
+<div id="fd-2-modal-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="vid-modal-heading" class="hidden flex flex-col fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-10 backdrop-blur-sm">
+
+<!-- Featured Destinations 2 BUTTON -->
+<div class="m-2">
+<div class="text-right">
+<button id="fd-2-modal-close" class="p-2 rounded-md bg-blue-900 text-white hover:text-white hover:bg-gray-900 transition duration-300">
+<i class="fas fa-times"> Close</i>
+</button>
+</div>
+
+<!-- Featured Destinations 2 MODAL -->
+<div role="document" class="border-2 border-white bg-blue-900 rounded-md shadow-lg m-5 flex flex-col">
+
+<!-- Featured Destinations 2 MODAL HEADING -->
+<div class="m-2">
+<div class="bg-black bg-opacity-40 rounded-md text-center">
+<h2 id="fd-2-modal-heading" tabindex="-1" class="text-white font-bold p-1">
+<p class="glow-text">DISCOVER</p>
+<p class="text-indigo-400">NEPTUNE</p>
+</h2>
+</div>
+</div>
+
+<!-- Featured Destinations 2 MODAL CONTENT -->
+<div class="border-2 border-white m-10">
+<div>
+
+</div>
+</div>
+
+<!-- Featured Destinations 2 MODAL LEGAL -->
+<div class="flex flex-col border-t border-gray-200 m-2 p-4 items-center">
+<p class="text-gray-200">© 2042 Neptune Voyages. All rights reserved.</p>
+<p class="text-gray-200 mt-4 md:mt-0">A subsidiary of Galactic Travel Holdings LLC.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<!-- FEATURED DESTINATIONS 3 -->
+<!-- Featured Destinations 3 CONTAINER -->
+<div id="fd-3-modal-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="vid-modal-heading" class="hidden flex flex-col fixed inset-0 z-50 overflow-y-auto bg-black bg-opacity-10 backdrop-blur-sm">
+
+<!-- Featured Destinations 3 BUTTON -->
+<div class="m-2">
+<div class="text-right">
+<button id="fd-3-modal-close" class="p-2 rounded-md bg-blue-900 text-white hover:text-white hover:bg-gray-900 transition duration-300">
+<i class="fas fa-times"> Close</i>
+</button>
+</div>
+
+<!-- Featured Destinations 3 MODAL -->
+<div role="document" class="border-2 border-white bg-blue-900 rounded-md shadow-lg m-5 flex flex-col">
+
+<!-- Featured Destinations 3 MODAL HEADING -->
+<div class="m-2">
+<div class="bg-black bg-opacity-40 rounded-md text-center">
+<h2 id="fd-3-modal-heading" tabindex="-1" class="text-white font-bold p-1">
+<p class="glow-text">DISCOVER</p>
+<p class="text-indigo-400">NEPTUNE</p>
+</h2>
+</div>
+</div>
+
+<!-- Featured Destinations 3 MODAL CONTENT -->
+<div class="border-2 border-white m-10">
+<div>
+
+</div>
+</div>
+
+<!-- Featured Destinations 1 MODAL LEGAL -->
+<div class="flex flex-col border-t border-gray-200 m-2 p-4 items-center">
+<p class="text-gray-200">© 2042 Neptune Voyages. All rights reserved.</p>
+<p class="text-gray-200 mt-4 md:mt-0">A subsidiary of Galactic Travel Holdings LLC.</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<script src="script.js" defer>
+
+</script>
+</body>
+</html>
