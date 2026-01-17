@@ -12,8 +12,7 @@ tags:
 
 <h1>Work in Progress</h1>
 current live site:
-https://andrew-jn-west.github.io/A11y-test-Discover-Neptune/
-
+https://west-palm-beef.github.io/A11y-Test-Discover-Neptune/
 ---
 
 This site was made with AI, for the sole purpose of N Squared LLC to test whether or not an AI model developed to create websites, can make them accessible by implementing WCAG 2.1/2.2 AA, ADA, and Section 508 standards.
