@@ -6,46 +6,142 @@
 <title>Discover Neptune - Explore the Unexplored</title>
 <style>
 
+:focus {
+outline: 0.2rem solid #000000 !important;
+box-shadow: 0rem 0rem 0rem .3rem #ffffff !important;
+}
+
 body {
-    background-color: black;
+    background: #1A1A7E;
+    border: solid 1rem #3B82F6;
+    border-radius: 4rem;
+    margin: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+}
+
+main {
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+div {
+  display: inline-flex;
+  flex-flow: column;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 p {
   color: #ffffff;
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+
+hr {
+  width: 40rem;
+  margin-top: 1rem;
 }
 
 a {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #ffffff;
+  background-color: #000000;
 }
 
+.version-link {
+    background: #6366F1;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    isolation: isolate;
+    border-radius: .5rem;
+}
 
+.version-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 126, 1);
+  z-index: -1;
+  margin: 0.9rem;
+  border-radius: .5rem;
+}
+
+.version-link:hover {
+    background: #BBBBBB;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #BBBBBB;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    isolation: isolate;
+    border-radius: .5rem;
+}
+
+.version-link:focus {
+    background: #BBBBBB;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #BBBBBB;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    isolation: isolate;
+    border-radius: .5rem;
+}
 
 </style>
 </head>
 
+<!---->
+
 <body>
 <header>
 <h1>
-<p>Discover Neptune</p>
+<i aria-hidden="true">♆</i>
+Discover Neptune
 </h1>
+
 <h2>
-<p>Choose which version you'd like to view</p>
+Choose which version you'd like to view
 </h2>
 </header>
 
-<main>
-  <div>
-    <a href="accessible/index.html">Accessible Version</a>
-  </div>
+<!---->
 
-  <div>
-    <a href="semi-accessible/index.html">Inaccessible Version</a>
-  </div>
+<main>
+<div>
+<p>Remade, lower-light version of the site</p>
+<a class="version-link" href="accessible/index.html">Accessible Version</a>
+</div>
+
+
+<div>
+  <hr aria-hidden="true">
+  <p>WARNING: This page can be very bright on certain brightness levels</p>
+  <a class="version-link" href="semi-accessible/index.html">Inaccessible Version</a>
+</div>
 </main>
 
+<!---->
 
 </body>
 </html>
