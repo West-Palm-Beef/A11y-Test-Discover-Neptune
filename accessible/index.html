@@ -113,12 +113,17 @@ Watch Video <i class="fas fa-play ml-2"></i>
 Quick Planner
 </h2>
 
+<div class="text-lg font-medium text-black mb-3 min-w-0">
+<p class="font-bold">How to:</p>
+<p>Use the calendar picker, or up and down arrow keys to adjust the dates, or type in specific values for month, day, and year.</p>
+</div>
+
 <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
 
 <div>
 <label for="destination" class="block text-xl font-medium text-black mb-1">Destination</label>
 <div class="relative">
-<select id="destination" class="focus:bg-blue-900 focus:text-white hover:bg-blue-900 hover:text-white w-full pl-3 pr-10 py-2 border border-gray-800 rounded-md">
+<select id="destination" class="focus:bg-blue-900 focus:text-white hover:bg-blue-900 hover:text-white w-full pl-3 pr-10 py-2 border border-gray-800 rounded-lg">
 <option class="bg-blue-900 text-white">Anywhere</option>
 <option class="bg-blue-900 text-white">Thalassa's Floating Gardens</option>
 <option class="bg-blue-900 text-white">Triton's Icebound Expidition Zone</option>
@@ -128,14 +133,15 @@ Quick Planner
 </div>
 </div>
 
-<div>
+
+<div class="pl-3 border-l-2 border-l-white">
 <label for="check-in" class="block text-xl font-medium text-black mb-1">Check In</label>
-<input type="date" id="check-in" class="w-full px-3 py-2 border border-gray-800 rounded-md">
+<input type="date" id="check-in" class="w-full px-3 py-2 border border-gray-800 rounded-lg">
 </div>
 
-<div>
+<div class="pl-3">
 <label for="check-out" class="block text-xl font-medium text-black mb-1">Check Out</label>
-<input type="date" id="check-out" class="w-full px-3 py-2 border border-gray-800 rounded-md">
+<input type="date" id="check-out" class="w-full px-3 py-2 border border-gray-800 rounded-lg">
 </div>
 
 <div class="flex items-end">
@@ -150,10 +156,10 @@ Quick Planner
 
 
 <!-- Trip Launch Dates -->
-<section class="bg-black/40 py-16 m-10 border-white border-l-2 border-t-2">
+<section class="bg-black/40 py-16 m-10 border-white border-l-2 border-t-2 ">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="text-center mb-12">
-<h2 id="launch-dates" tabindex="-1" class="break-all text-5xl font-bold text-white mb-4">
+<h2 id="launch-dates" tabindex="-1" class="break-all text-5xl font-bold text-white mb-4 ">
 <p>Trip Launch Dates</p>
 </h2>
 <p class="text-gray-100 text-2xl max-w-3xl mx-auto">See when your desired trip-package is set to launch next!</p>
@@ -167,54 +173,68 @@ Quick Planner
 <div class="p-6">
 <div class="flex items-center mb-2">
 <h3 class="flex text-2xl font-bold text-white">
-<p>Proteus Package</p>
+<p>Proteus Package
+<br aria-hidden="true">
+Launch Details</p>
 </h3>
 </div>
 
-<hr>
+<hr aria-hidden="true">
 
 <p class="text-white mt-2 font-bold">Departure From:</p>
 
-<div class="flex">
-<div class="flex items-center text-white text-sm mb-4 mt-1">
+<div class="flex flex-col gap-4 sm:flex-row md:justify-between">
+<div class="flex items-center text-white text-sm mt-1 min-w-0">
 <i class="fas fa-map-marker-alt text-2xl mr-2"></i>
 <div class="flex flex-col">
-<p>Discover Travel Terminal,</p>
-<p>LA, CA, USA, Earth</p>
+<p>Discover Travel
+<br aria-hidden="true">
+Terminal #6,
+<br aria-hidden="true">
+LA, CA, USA
+<br aria-hidden="true">
+Earth</p>
 </div>
 </div>
 
 <div class="flex items-center text-white mb-4 mt-2">
-<i class="fas fa-clock text-2xl ml-4 mr-2"></i>
+<i class="fas fa-clock text-2xl mr-2"></i>
 <div>
-<p>Trip:</p>
-<p>7 Days</p>
+<p>Trip:
+<br aria-hidden="true">
+7 Days</p>
+</div>
 </div>
 </div>
 </div>
 
-<hr>
+<hr aria-hidden="true">
 
-<p class="text-white mt-2 font-bold">Destination:</p>
+<div class="p-6">
+<p class="text-white -mt-3 font-bold">Destination:</p>
 
-<div class="flex">
-<div class="flex items-center text-white text-sm mb-4 mt-1">
+<div class="flex flex-col gap-4 md:flex-row md:justify-between">
+<div class="flex items-center text-white text-sm mb-4 mt-1 min-w-0">
 <i class="fas fa-map-marker-alt text-2xl mr-2"></i>
 <div class="flex flex-col">
-<p>Neptune Orbital Station</p>
+<p>Neptune Orbital Station
+<br aria-hidden="true">
+Pad #4
+</p>
 </div>
 </div>
 
-<div class="flex items-center text-white mb-4 mt-2">
-<i class="fas fa-clock text-2xl ml-4 mr-2"></i>
+<div class="flex items-center text-white mb-4 mt-2 min-w-0">
+<i class="fas fa-clock text-2xl mr-2"></i>
 <div class="flex flex-col">
-<p>Stay:</p>
-<p> 7 Days</p>
+<p>Stay:
+<br aria-hidden="true">
+7 Days</p>
 </div>
 </div>
 </div>
 
-<hr>
+<hr aria-hidden="true">
 
 
 <p class="text-white my-1 font-bold">Launch Date:</p>
@@ -229,25 +249,80 @@ Quick Planner
 </div>
 
 <!-- Date 2 -->
-<div class="bg-white/10 rounded-md rounded-md overflow-hidden shadow-lg transition duration-300 hover:shadow-xl border-l-4 border-t-4 border-white">
+<div class="bg-white/10 rounded-md overflow-hidden shadow-lg transition duration-300 border-l-4 border-t-4 border-white">
 
 <div class="p-6">
-<div class="flex items-start mb-2">
-<h3 class="text-xl font-bold text-white">
-<p>Larissa Package Launch Date</p>
+<div class="flex items-center mb-2">
+<h3 class="flex text-2xl font-bold text-white">
+<p>Larissa Package
+<br aria-hidden="true">
+Launch Details</p>
 </h3>
 </div>
-<p class="text-white mb-4">10 days exploring temples, rice terraces and beaches</p>
-<div class="flex items-center text-white text-sm mb-4">
-<i class="fas fa-map-marker-alt mr-2"></i>
-<span>Bali, Indonesia</span>
-<i class="fas fa-clock ml-4 mr-2"></i>
-<span>10 Days</span>
+
+<hr aria-hidden="true">
+
+<p class="text-white mt-2 font-bold">Departure From:</p>
+
+<div class="flex flex-col gap-4 sm:flex-row md:justify-between">
+<div class="flex items-center text-white text-sm mt-1 min-w-0">
+<i class="fas fa-map-marker-alt text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Discover Travel
+<br aria-hidden="true">
+Terminal #12,
+<br aria-hidden="true">
+Toronto, Ontario, CA
+<br aria-hidden="true">
+Earth</p>
 </div>
+</div>
+
+<div class="flex items-center text-white mb-4 mt-2">
+<i class="fas fa-clock text-2xl mr-2"></i>
+<div>
+<p>Trip:
+<br aria-hidden="true">
+10 Days</p>
+</div>
+</div>
+</div>
+</div>
+
+<hr aria-hidden="true">
+
+<div class="p-6">
+<p class="text-white -mt-3 font-bold">Destination:</p>
+
+<div class="flex flex-col gap-4 md:flex-row md:justify-between">
+<div class="flex items-center text-white text-sm mb-4 mt-1 min-w-0">
+<i class="fas fa-map-marker-alt text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Neptune Orbital Station
+<br aria-hidden="true">
+Pad #15
+</p>
+</div>
+</div>
+
+<div class="flex items-center text-white mb-4 mt-2 min-w-0">
+<i class="fas fa-clock text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Stay:
+<br aria-hidden="true">
+10 Days</p>
+</div>
+</div>
+</div>
+
+<hr aria-hidden="true">
+
+
+<p class="text-white my-1 font-bold">Launch Date:</p>
+
 <div class="flex justify-between items-center">
 <div class="flex items-center bg-black/80 p-1 rounded-md">
-<i class="fas fa-star text-yellow-400"></i>
-<span class="text-white p-1">4.8 (96 reviews)</span>
+<p class="text-white ml-1">March 23, 2131</p>
 </div>
 <button class="border-2 border-white bg-blue-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Book Now</button>
 </div>
@@ -255,32 +330,87 @@ Quick Planner
 </div>
 
 <!-- Date 3 -->
-<div class="bg-white/10 rounded-md rounded-md overflow-hidden shadow-lg transition duration-300 hover:shadow-xl border-l-4 border-t-4 border-white">
+<div class="bg-white/10 rounded-md overflow-hidden shadow-lg transition duration-300 border-l-4 border-t-4 border-white">
 
 <div class="p-6">
-<div class="flex items-start mb-2">
-<h3 class="text-xl font-bold text-white">
-<p>Triton Package Launch Date</p>
+<div class="flex items-center mb-2">
+<h3 class="flex text-2xl font-bold text-white">
+<p>Triton Package
+<br aria-hidden="true">
+Launch Details</p>
 </h3>
 </div>
-<p class="text-white mb-4">14 days exploring Santorini, Mykonos, and Crete</p>
-<div class="flex items-center text-white text-sm mb-4">
-<i class="fas fa-map-marker-alt mr-2"></i>
-<span>Greece</span>
-<i class="fas fa-clock ml-4 mr-2"></i>
-<span>14 Days</span>
+
+<hr aria-hidden="true">
+
+<p class="text-white mt-2 font-bold">Departure From:</p>
+
+<div class="flex flex-col gap-4 sm:flex-row md:justify-between">
+<div class="flex items-center text-white text-sm mt-1 min-w-0">
+<i class="fas fa-map-marker-alt text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Discover Travel
+<br aria-hidden="true">
+Terminal #28,
+<br aria-hidden="true">
+Tokyo, JPN
+<br aria-hidden="true">
+Earth</p>
 </div>
-<div class="flex justify-between items-center">
-<div class="flex items-center bg-black/80 p-1 rounded-md">
-<i class="fas fa-star text-yellow-400"></i>
-<span class="ml-1 text-white">4.7 (84 reviews)</span>
 </div>
-<button class="hover:shadow-xl border-2 border-white bg-blue-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Book Now</button>
+
+<div class="flex items-center text-white mb-4 mt-2">
+<i class="fas fa-clock text-2xl mr-2"></i>
+<div>
+<p>Trip:
+<br aria-hidden="true">
+14 Days</p>
 </div>
 </div>
 </div>
 </div>
 
+<hr aria-hidden="true">
+
+<div class="p-6">
+<p class="text-white -mt-3 font-bold">Destination:</p>
+
+<div class="flex flex-col gap-4 md:flex-row md:justify-between">
+<div class="flex items-center text-white text-sm mb-4 mt-1 min-w-0">
+<i class="fas fa-map-marker-alt text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Neptune Orbital Station
+<br aria-hidden="true">
+Pad #19
+</p>
+</div>
+</div>
+
+<div class="flex items-center text-white mb-4 mt-2 min-w-0">
+<i class="fas fa-clock text-2xl mr-2"></i>
+<div class="flex flex-col">
+<p>Stay:
+<br aria-hidden="true">
+14 Days</p>
+</div>
+</div>
+</div>
+
+<hr aria-hidden="true">
+
+
+<p class="text-white my-1 font-bold">Launch Date:</p>
+
+<div class="flex justify-between items-center">
+<div class="flex items-center bg-black/80 p-1 rounded-md">
+<p class="text-white ml-1">May 8th, 2132</p>
+</div>
+<button class="border-2 border-white bg-blue-900 hover:bg-gray-800 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Book Now</button>
+</div>
+</div>
+</div>
+
+</div>
 <div class="text-center mt-12">
 <button class="bg-black/30 border-2 border-white hover:bg-gray-800 text-white px-6 py-3 rounded-md font-medium transition duration-300">View All Packages</button>
 </div>
